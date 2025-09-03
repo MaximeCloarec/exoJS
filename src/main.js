@@ -1,12 +1,17 @@
+import collection from "easter-egg-collection";
 console.log("Hello World from main.js");
+console.log(import.meta.env.VITE_SOME_KEY);
+console.log(import.meta.env.VITE_DB_PASSWORD);
+
+
 
 const siteName = "Mon super site";
 document.getElementById("title").innerText = siteName;
 
-
 const currentYear = new Date().getFullYear();
-document.getElementById("copyright").innerText = `Copyright © ${currentYear} - Tous droits réservés par ${siteName}`;
-
+document.getElementById(
+    "copyright"
+).innerText = `Copyright © ${currentYear} - Tous droits réservés par ${siteName}`;
 
 //* On est dans /src/main.js
 
