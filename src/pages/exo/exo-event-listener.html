@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1 id="exo">EXO EVENT LISTENER</h1>
+        <h2>Exemple texte area</h2>
+        <textarea name="text" id="text" cols="30" rows="10"></textarea>
+        <button id="button1">CLIQUE</button>
+        <div id="mirrorText"></div>
+    </body>
+    <script>
+        let status = false;
+        document.getElementById("exo").addEventListener("click", () => {
+            status = !status;
+            document.getElementById("exo").textContent = status
+                ? "CLICKED"
+                : "EXO EVENT LISTENER";
+        });
+
+        document.getElementById("text").addEventListener("input", (e) => {
+            e.target.value.length >= 5
+                ? (document.getElementById("button1").disabled = true)
+                : (document.getElementById("button1").disabled = false);
+        });
+
+
+        document.getElementById("text").addEventListener("input", (e) => {
+            document.getElementById("mirrorText").textContent = e.target.value;
+            localStorage.setItem("monSuperTexte", e.target.value);
+        });
+
+        if(localStorage.getItem("monSuperTexte")){
+            document.getElementById("text").value = localStorage.getItem("monSuperTexte");
+        }
+    </script>
+</html>
