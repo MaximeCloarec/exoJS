@@ -16,7 +16,11 @@ export function renderTimeLine(timelineElementId) {
         li.appendChild(divCircle);
 
         const div = document.createElement("div");
-        div.classList.add(`timeline-${steps.side}`, "mb-10", "md:text-end");
+        div.classList.add(
+            `timeline-${steps.side}`,
+            "mb-10",
+            `md:text-${steps.side === "start" ? "start" : "end"}`
+        );
 
         div.appendChild(createTime(steps));
 
