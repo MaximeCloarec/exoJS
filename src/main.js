@@ -39,8 +39,19 @@
 
 // setupCounter(document.querySelector('#counter'))
 
-import { renderTimeLine } from "./services/timelineService.js";
+// import { renderTimeLine } from "./services/timelineService.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-    renderTimeLine("#timeline");
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//     renderTimeLine("#timeline");
+// });
+
+//-----------------------------------------------------------------------------
+
+//Autre methode : 
+// Plus de fonction async ICI !!!
+
+import { chuckNorrisWelcome } from "./services/welcomeService";
+chuckNorrisWelcome()
+
+
+

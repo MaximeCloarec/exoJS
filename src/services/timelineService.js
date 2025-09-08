@@ -19,7 +19,7 @@ export function renderTimeLine(timelineElementId) {
         div.classList.add(
             `timeline-${steps.side}`,
             "mb-10",
-            `md:text-${steps.side === "start" ? "start" : "end"}`
+            `md:text-${steps.side === "start" ? "end" : "start"}`
         );
 
         div.appendChild(createTime(steps));
